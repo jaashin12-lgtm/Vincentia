@@ -825,12 +825,12 @@ a {
 
 /* Left section background image */
 .left-hand-side {
-  background-image: url('/images/Nost-Kayak.png');
+  background-image: url('images/Nost-Kayak.png');
 }
 
 /* Right section background image */
 .right-hand-side {
-  background-image: url('/images/Nost-Star.png');
+  background-image: url('images/Nost-Star.png');
 }
 
 
@@ -2080,4 +2080,5 @@ p {
     max-width: 100%; /* Allow full width for images */
     margin-top: 15px;
   }
+
 }
