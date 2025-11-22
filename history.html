@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vincentia</title>
+</head>
+<body>
+<div class="Menu">
+  <div class="hamburger" onclick="toggleSidebar()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="32" viewBox="0 0 36 32" fill="none">
+    <path d="M0 2H35.0143M0 16H35.0143M0 30H35.0143" stroke="white" stroke-width="3"/>
+    </svg>
+  </div>
+  <div class="words" onclick="window.location.href='Vincentia.html';"><strong>Home</strong></div>
+  <div class="words" onclick="window.location.href='history.html';">History</div>
+  <div class="words" onclick="window.location.href='attractions.html';">Attractions</div>
+  <div class="words" onclick="window.location.href='forum.html';">Forum</div>
+
+    
+  <div class="right-icons">
+     <div class="search-wrapper">
+     <!-- Default search bar (visible on larger screens) -->
+     <form action="/search" method="GET" class="search-bar">
+       <input type="text" id="search" name="q" placeholder="Search..." required>
+       <button type="submit">Search</button>
+     </form>
+  </div>
+     <!-- Search icon (hidden by default) -->
+  <div class="search-icon" onclick="toggleSearchBar()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+      <path d="M8.57621 16.181C10.4387 16.181 12.1561 15.6128 13.5613 14.666L18.8476 19.6528C19.0929 19.8843 19.4164 20 19.7621 20C20.487 20 21 19.474 21 18.8006C21 18.485 20.8885 18.1799 20.6431 17.959L15.3903 12.9932C16.4944 11.6255 17.1524 9.93161 17.1524 8.09048C17.1524 3.64019 13.2937 0 8.57621 0C3.86989 0 0 3.62967 0 8.09048C0 12.5408 3.85874 16.181 8.57621 16.181ZM8.57621 14.4345C4.89591 14.4345 1.8513 11.5623 1.8513 8.09048C1.8513 4.61862 4.89591 1.74645 8.57621 1.74645C12.2565 1.74645 15.3011 4.61862 15.3011 8.09048C15.3011 11.5623 12.2565 14.4345 8.57621 14.4345Z" fill="black"/>
+    </svg>
+  </div>
+  <div class="search-overlay" id="searchOverlay">
+  <div class="search-overlay-content">
+    <button class="close-overlay">&times;</button>
+    <input type="text" placeholder="Type to search..." />
+    <button>Search</button>
+  </div>
+</div>
+ 
+   
+    <div class="Profile">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2ZM6.02332 15.4163C7.49083 17.6069 9.69511 19 12.1597 19C14.6243 19 16.8286 17.6069 18.2961 15.4163C16.6885 13.9172 14.5312 13 12.1597 13C9.78821 13 7.63095 13.9172 6.02332 15.4163ZM12 11C13.6569 11 15 9.65685 15 8C15 6.34315 13.6569 5 12 5C10.3431 5 9 6.34315 9 8C9 9.65685 10.3431 11 12 11Z" fill="black"/>
+</svg>
+    </div>
+
+    <div class="Setting">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M8.68637 4.00008L11.293 1.39348C11.6835 1.00295 12.3167 1.00295 12.7072 1.39348L15.3138 4.00008H19.0001C19.5524 4.00008 20.0001 4.4478 20.0001 5.00008V8.68637L22.6067 11.293C22.9972 11.6835 22.9972 12.3167 22.6067 12.7072L20.0001 15.3138V19.0001C20.0001 19.5524 19.5524 20.0001 19.0001 20.0001H15.3138L12.7072 22.6067C12.3167 22.9972 11.6835 22.9972 11.293 22.6067L8.68637 20.0001H5.00008C4.4478 20.0001 4.00008 19.5524 4.00008 19.0001V15.3138L1.39348 12.7072C1.00295 12.3167 1.00295 11.6835 1.39348 11.293L4.00008 8.68637V5.00008C4.00008 4.4478 4.4478 4.00008 5.00008 4.00008H8.68637ZM12.0001 15.0001C13.6569 15.0001 15.0001 13.6569 15.0001 12.0001C15.0001 10.3432 13.6569 9.00008 12.0001 9.00008C10.3432 9.00008 9.00008 10.3432 9.00008 12.0001C9.00008 13.6569 10.3432 15.0001 12.0001 15.0001Z" fill="black"/>
+    </svg>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+
+    <div class="close-btn" onclick="toggleSidebar()">×</div>
+    <div class="menu-item" onclick="window.location.href='Vincentia.html';"><strong>Home</strong></div>
+    <div class="menu-item" onclick="window.location.href='history.html';">History</div>
+    <div class="menu-item" onclick="window.location.href='attractions.html';">Attractions</div>
+    <div class="menu-item" onclick="window.location.href='forum.html';">Forum</div>
+    <!-- Additional items can be added here -->
+
+</div>
+<script src="hamburger.js"></script>
+
+<div class="history-container">
+    <div class="background-elements">
+    <!-- Tree SVG -->
+    <div class="tree-container">
+      <svg class="shaking-svg" xmlns="http://www.w3.org/2000/svg" width="277" height="1371" viewBox="0 0 277 1371" fill="none">
+        <path d="M211.127 39.4681L221.087 240.396L243.79 166.073L221.087 0L256.92 120.967L284 84.5744L249.261 216.818L284 299.855L249.261 254.748L221.087 406.47V599.197L284 514.11L226.01 654.555L220.266 1067.18L244.611 1376H159.428L201.939 1199.93L183.612 938.52V813L147.779 775.5H0L164.191 746.5L183.612 737.5L189.356 575.619V470.029L164.191 435.686L136.5 458.5L86.2328 495.5L189.356 361.363L211.127 327.021L183.612 289.091L111.125 299.855L189.356 254.748L86.2328 120.967L137.384 155.309L158.447 39.4681L147.779 176.837L205.768 229.632L211.127 39.4681Z" fill="#6D5A4C"/>
+      </svg>
+
+      <!-- Falling Leaves -->
+      <svg class="leaf-svg leaf1" xmlns="http://www.w3.org/2000/svg" width="21" height="37" viewBox="0 0 21 37" fill="none">
+        <ellipse cx="10.5002" cy="18.4998" rx="10.5" ry="18.5" fill="#869A82"/>
+      </svg>
+      <svg class="leaf-svg leaf2" xmlns="http://www.w3.org/2000/svg" width="21" height="37" viewBox="0 0 21 37" fill="none">
+        <ellipse cx="10.5002" cy="18.4998" rx="10.5" ry="18.5" fill="#869A82"/>
+      </svg>
+      <svg class="leaf-svg leaf3" xmlns="http://www.w3.org/2000/svg" width="21" height="37" viewBox="0 0 21 37" fill="none">
+        <ellipse cx="10.5002" cy="18.4998" rx="10.5" ry="18.5" fill="#869A82"/>
+      </svg>
+    </div>
+  </div>
+  <div class="History-title">
+    <h1>History</h1>
+  </div>
+
+<section class="history-section-container">
+  <div class="Indigenous">
+    <figure>
+      <img src="/images/Aboriginal.png" width="600" height="450" alt="Indigenous Culture">
+      <figcaption class="styled-cap">
+        <span class="background-image"></span>
+        “Vincentia High’s indigenous ranger graduation ceremony” (SouthCoastRegister, 2014, November 18)
+      </figcaption>
+    </figure>
+  </div>
+  <div class="history-section-text">
+    <h2>Indigenous Culture</h2>
+    <p>
+      The <strong>Dharawal and Yuin peoples are the traditional custodians of this land</strong> and have strong ties to the Wandandian people. The Yuin people speak the Dhurga language, which is being actively preserved. (Microsoft - Search, 2022)
+    </p>
+    <h3>Cultural Experiences for Visitors</h3>
+    <ul>
+      <li><strong><u>Traditional smoking ceremonies:</u></strong> “Gumaraa Welcome to Country” and “traditional Aboriginal dance troupe performances.”</li>
+      <li><strong><u>Experiences:</u></strong> Tours from Gadhungal Marring, cultural workshops, and art workshops. Offers “history of the land, bush tucker, and plant medicine knowledge.”</li>
+      <li><strong><u>Significant Places:</u></strong> “Gulaga (Mount Dromedary) and Biamanga National Park” hold creation stories of the Yuin people (Mather, K. 2024, June 12).</li>
+    </ul>
+  </div>
+</section>
+
+  <section class="history-section-container">
+    
+    <div class="history-section-text">
+      <h2>Colonial History</h2>
+      <ul>
+        <li><strong><u>Colonial Beginnings:</u></strong> The towns original name was South Huskisson, Vincentia; founded in 1841 as a <strong>seaport built to transport wool from inland</strong>  NSW to Jervis Bay.</li>
+        <li><strong><u>Rebirth and Renaming:</u></strong> In 1952, developer Henry Halloran renamed the area <strong>Vincentia, after St Vincent County,  </strong> honored John Jervis the 1st <strong>Earl</strong> of St Vincent named a <strong>a British navel hero</strong></li>
+        <li><strong><u>Today's Vincentia:</u></strong> Now part of the City of Shoalhaven, Vincentia; known for  <strong> white sand beaches,  Dhurga language education, and tourism </strong> that honors Indigenous knowledge and heritage.</li>
+      </ul>
+    </div>
+    <div class="Indigenous">
+    <figure>
+      <img src="/images/Colonial.png" width="600" height="450" alt="Colonial">
+      <figcaption class="styled-cap">
+        <span class="background-image"></span>
+        “JERVIS BAY, NSW, 1919. CRUISERS FROM THE IMPERIAL JAPANESE NAVY STEAMING INTO JERVIS BAY” (Awm.gov.au, 2025).
+      </figcaption>
+    </figure>
+  </div>
+  </section>
+
+
+</div>
+</body>

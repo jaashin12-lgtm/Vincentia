@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vincentia</title>
+</head>
+<body>
+<div class="Menu">
+  <div class="hamburger" onclick="toggleSidebar()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="32" viewBox="0 0 36 32" fill="none">
+    <path d="M0 2H35.0143M0 16H35.0143M0 30H35.0143" stroke="white" stroke-width="3"/>
+    </svg>
+  </div>
+  <div class="words" onclick="window.location.href='Vincentia.html';"><strong>Home</strong></div>
+  <div class="words" onclick="window.location.href='history.html';">History</div>
+  <div class="words" onclick="window.location.href='attractions.html';">Attractions</div>
+  <div class="words" onclick="window.location.href='forum.html';">Forum</div>
+
+    
+  <div class="right-icons">
+     <div class="search-wrapper">
+     <!-- Default search bar (visible on larger screens) -->
+     <form action="/search" method="GET" class="search-bar">
+       <input type="text" id="search" name="q" placeholder="Search..." required>
+       <button type="submit">Search</button>
+     </form>
+  </div>
+     <!-- Search icon (hidden by default) -->
+  <div class="search-icon" onclick="toggleSearchBar()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+      <path d="M8.57621 16.181C10.4387 16.181 12.1561 15.6128 13.5613 14.666L18.8476 19.6528C19.0929 19.8843 19.4164 20 19.7621 20C20.487 20 21 19.474 21 18.8006C21 18.485 20.8885 18.1799 20.6431 17.959L15.3903 12.9932C16.4944 11.6255 17.1524 9.93161 17.1524 8.09048C17.1524 3.64019 13.2937 0 8.57621 0C3.86989 0 0 3.62967 0 8.09048C0 12.5408 3.85874 16.181 8.57621 16.181ZM8.57621 14.4345C4.89591 14.4345 1.8513 11.5623 1.8513 8.09048C1.8513 4.61862 4.89591 1.74645 8.57621 1.74645C12.2565 1.74645 15.3011 4.61862 15.3011 8.09048C15.3011 11.5623 12.2565 14.4345 8.57621 14.4345Z" fill="black"/>
+    </svg>
+  </div>
+  <div class="search-overlay" id="searchOverlay">
+  <div class="search-overlay-content">
+    <button class="close-overlay">&times;</button>
+    <input type="text" placeholder="Type to search..." />
+    <button>Search</button>
+  </div>
+</div>
+ 
+   
+    <div class="Profile">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2ZM6.02332 15.4163C7.49083 17.6069 9.69511 19 12.1597 19C14.6243 19 16.8286 17.6069 18.2961 15.4163C16.6885 13.9172 14.5312 13 12.1597 13C9.78821 13 7.63095 13.9172 6.02332 15.4163ZM12 11C13.6569 11 15 9.65685 15 8C15 6.34315 13.6569 5 12 5C10.3431 5 9 6.34315 9 8C9 9.65685 10.3431 11 12 11Z" fill="black"/>
+</svg>
+    </div>
+
+    <div class="Setting">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M8.68637 4.00008L11.293 1.39348C11.6835 1.00295 12.3167 1.00295 12.7072 1.39348L15.3138 4.00008H19.0001C19.5524 4.00008 20.0001 4.4478 20.0001 5.00008V8.68637L22.6067 11.293C22.9972 11.6835 22.9972 12.3167 22.6067 12.7072L20.0001 15.3138V19.0001C20.0001 19.5524 19.5524 20.0001 19.0001 20.0001H15.3138L12.7072 22.6067C12.3167 22.9972 11.6835 22.9972 11.293 22.6067L8.68637 20.0001H5.00008C4.4478 20.0001 4.00008 19.5524 4.00008 19.0001V15.3138L1.39348 12.7072C1.00295 12.3167 1.00295 11.6835 1.39348 11.293L4.00008 8.68637V5.00008C4.00008 4.4478 4.4478 4.00008 5.00008 4.00008H8.68637ZM12.0001 15.0001C13.6569 15.0001 15.0001 13.6569 15.0001 12.0001C15.0001 10.3432 13.6569 9.00008 12.0001 9.00008C10.3432 9.00008 9.00008 10.3432 9.00008 12.0001C9.00008 13.6569 10.3432 15.0001 12.0001 15.0001Z" fill="black"/>
+    </svg>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+
+    <div class="close-btn" onclick="toggleSidebar()">×</div>
+    <div class="menu-item" onclick="window.location.href='Vincentia.html';"><strong>Home</strong></div>
+    <div class="menu-item" onclick="window.location.href='history.html';">History</div>
+    <div class="menu-item" onclick="window.location.href='attractions.html';">Attractions</div>
+    <div class="menu-item" onclick="window.location.href='forum.html';">Forum</div>
+    <!-- Additional items can be added here -->
+
+</div>
+<script src="hamburger.js"></script>
+
+<div class="box">
+
+
+  <div class="inner-box">
+    <div class="column text-with-image">
+        <!-- Left side: Text content -->
+        <div class="text-content">
+            <h1>Thai Massage</h1>
+            <h2>“Be Relax” is located in Burton Street shopping village. Most popular treatments: traditional Thai massage, organic coconut oil massage, and body scrub with hot towels.</h2>
+            <p>Offers a range of treatments alongside Jasmine tea, prices ranging from $69-$190.</p>
+        </div>
+
+        <!-- Right side: Image content -->
+        <div class="image-content">
+            <img src="/images/Thai.png" alt="Thai Massage">
+        </div>
+    </div>
+    
+    <div class="column">
+      <!-- Left side: Image content -->
+        <div class="image-content">
+            <img src="/images/Creative.png" alt="Creative">
+        </div>
+      
+      <!-- Right side: Text content -->
+      <div class="text-content">
+            <h1>Creative Workshops</h1>
+            <h2>Embark on a creative journey through events, such as Watercolor painting, Stencil, Sketching, Spray painting, Oil painting, and Canvas painting workshop in Vincentia.</h2>
+            <p>Bring your family and friends for a fun art experience many of which are free of charge</p>
+      </div>
+    </div>
+  </div>
+  <div class="inner-box">
+    <div class="column">
+      <!-- Left side: Image content -->
+        <div class="image-content">
+            <img src="/images/Bikehire.png" alt="Bikehire">
+        </div>
+      
+      <!-- Right side: Text content -->
+      <div class="text-content">
+            <h1>Bike Hire</h1>
+            <h2>At “Jervis Bay Bike Hire” they offer, bicycles, including beach cruisers, hybrids, tandems, and trikes, and provide delivery and pickup services to your location.</h2>
+            <p>Enjoy a family or group bike ride, in costumes around Vincentia’s Parks</p>
+      </div>
+    </div>
+    <div class="column text-with-image">
+        <!-- Left side: Text content -->
+        <div class="text-content">
+            <h1>Jervis Bay Marine Park</h1>
+            <h2>Its natural beauty includes a beautiful underwater world in Jervis Bay Marine Park including: spot playful dolphins and migrating whales or just relax on exquisite beaches. </h2>
+            <p>Enjoy snorkeling looking out for turtles, seahorses, and stingrays in a whole group.</p>
+        </div>
+
+        <!-- Right side: Image content -->
+        <div class="image-content">
+            <img src="/images/Marinepark.png" alt="Marine Park">
+        </div>
+    </div>
+  </div>
+<div class="inner-box">
+<div class="column text-with-image">
+        <!-- Left side: Text content -->
+        <div class="text-content">
+            <h1>The Golfie</h1>
+            <h2>I renowned restaurant to be enjoyed in the nightlife, a hidden gem serving Thai, Chinese, Malaysian & daily specials, and some western dishes.</h2>
+            <p>Enjoy lovely views over golf course and kangaroos roaming freely.</p>
+        </div>
+
+        <!-- Right side: Image content -->
+        <div class="image-content">
+            <img src="/images/Golfie.png" alt="Golfie">
+        </div>
+    </div>
+    
+    <div class="column">
+      <!-- Left side: Image content -->
+        <div class="image-content">
+            <img src="/images/Paddle.png" alt="Paddleboarding">
+        </div>
+      
+      <!-- Right side: Text content -->
+      <div class="text-content">
+            <h1>Kayaking</h1>
+            <h2>At Huskisson, enjoy guided trips, kayak hire and kayaking tutition, a whole kayaking trip!</h2>
+            <p>Have fun at daily kayaking trips from $70 to $160 for tuition.</p>
+      </div>
+    </div>
+  </div>
+   <div class="inner-box">
+    <div class="column text-with-image">
+        <!-- Left side: Text content -->
+        <div class="text-content">
+            <h1>B/B Leisure Center</h1>
+            <h2>Have an active lifestyle?  Enjoy a fully-equipped gym, 25m lap pool, spa, waterside and even personal training.</h2>
+            <p>To swim as an adult only $7.80 and for a family, $27.30</p>
+        </div>
+
+        <!-- Right side: Image content -->
+        <div class="image-content">
+            <img src="/images/LeisureCenter.png" alt="LeisureCenter">
+        </div>
+    </div>
+    
+    <div class="column">
+      <!-- Left side: Image content -->
+        <div class="image-content">
+            <img src="/images/SuperBargain.png" alt="SuperBargain">
+        </div>
+      
+      <!-- Right side: Text content -->
+      <div class="text-content">
+            <h1>Super Bargain</h1>
+            <h2>A variety discount store, for products such as home ware, kitchenware,  party supplies (helium balloons) and seasonal products.</h2>
+            <p>Plan a fun party event for any holiday, Christmas, Halloween, Weddings!</p>
+      </div>
+    </div>
+  </div>
+  <div class="inner-box">
+    <div class="column">
+      <!-- Left side: Image content -->
+        <div class="image-content">
+            <img src="/images/Hippie.png" alt="Hippie">
+        </div>
+      
+      <!-- Right side: Text content -->
+      <div class="text-content">
+            <h1>The Hippie shop</h1>
+            <h2>Purchase items such as pouches, Hippie fashion, incense, jewelry, gemstones and more. They have interesting items related to health and gift packaging as well.</h2>
+            <p>Buy three pouches for $10 dollars, and wear a your new weekend day fit.</p>
+      </div>
+    </div>
+    <div class="column text-with-image">
+        <!-- Left side: Text content -->
+        <div class="text-content">
+            <h1>Burton St Eateries</h1>
+            <h2>Includes breakfast, coffee and brunch,  Italian, Thai Chinese restaurants, Pizza’s and Kebabs and organic food store.</h2>
+            <p>Explore the entire street morning to night, taking Instagram worthy pictures!</p>
+        </div>
+
+        <!-- Right side: Image content -->
+        <div class="image-content">
+            <img src="/images/BurtonEateries.png" alt="BurtonEateries">
+        </div>
+    </div>
+    
+    
+  </div>
+  <div class="inner-box">
+    <div class="column text-with-image">
+        <!-- Left side: Text content -->
+        <div class="text-content">
+          <h1>Shopping Village</h1>
+          <h2>Need to buy gift, groceries, toys, rather go to somewhere affordable to dine or discover a huge selection on health, beauty and more?</h2>
+          <p>Try Coles click & collect system to make homemade dinners easy</p>
+        </div>
+
+        <!-- Right side: Image content -->
+        <div class="image-content">
+            <img src="/images/ShoppingVil.png" alt="Shopping Village">
+        </div>
+    </div>
+    
+    <div class="column">
+      <!-- Left side: Image content -->
+        <div class="image-content">
+            <img src="/images/MoonaCreek.png" alt="MoonaCreek">
+        </div>
+      
+      <!-- Right side: Text content -->
+      <div class="text-content">
+            <h1>Moona Creek Eateries</h1>
+            <h2>Try a new street, Authentic pad Thai and green curries, budget friendly noodles, artisan coffee, fish and chips.</h2>
+            <p>Even options for vegetarians and gluten-free, and picnic by the sunset</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
